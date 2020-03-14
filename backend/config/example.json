@@ -1,0 +1,19 @@
+{
+  "panel-name":"name",
+  "node_port": 5555,
+  "json_indentation": 4,
+  "mssql": {
+    "user": "mssql-name",
+    "password": "some-password",
+    "server": "host-ip",
+    "database": "dababase-name",
+    "options": {
+      "encrypt": false,
+      "instanceName": "instance"
+    }
+  },
+  "drive": {
+    "user":"",
+    "password":""
+  }
+}
