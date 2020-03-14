@@ -1,0 +1,183 @@
+html, body {
+  font-family: 'Roboto', 'Helvetica', sans-serif;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  color: #333;
+  overflow: hidden;
+}
+
+#main {
+   height: 100%;
+   width: 100%;
+   display: block;
+}
+
+.turnos {
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  transition: opacity 3s;
+}
+
+.turnos-hidden {
+  opacity: 0;
+  transition: opacity 3s;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+}
+
+.header .net,
+.header .datetime
+{
+  display: flex;
+  flex-direction: column;
+  width: 25vw;
+}
+
+.header .datetime {
+  text-align: center;
+  margin: auto;
+  font-size: 3vh;
+}
+
+.header .datetime .date,
+.header .datetime .time {
+  width: 100%;
+  height: 100%;
+}
+
+.verticalSpace {
+  height: 100%;
+}
+
+p {
+  margin: 0;
+}
+
+.header .datetime .date {
+}
+
+/* .header .datetime .time {
+
+} */
+
+.header .title {
+  width: 50vw;
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+  font-size: 3vh;
+}
+
+.table-header {
+  display: flex;
+  flex-direction: row;
+  height: calc( 90vh / 7 );
+  font-size: 3vh;
+  font-weight: 700;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.table-row {
+  display: flex;
+  flex-direction: row;
+  height: calc( 100vh / 7 );
+  border-top: 1px solid black;
+}
+
+.table-row:last-child {
+  border-bottom: 1px solid black;
+}
+
+
+.column-hora,
+.column-entrega {
+  margin: auto 0;
+  width: 10vw;
+  text-align: center;
+}
+
+.column-cliente {
+  margin: auto 0;
+  padding-left: 2vw;
+  width: 65vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.column-fecha {
+  margin: auto 0;
+  width: 15vw;
+  text-align: center;
+}
+
+.cliente {
+  font-size: 5vh;
+  font-weight: 700;
+}
+
+#image {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#image.hidden {
+  opacity: 0%;
+  transition: opacity 3s;
+}
+
+#image.show {
+  z-index: 100;
+  opacity: 100%;
+  transition: opacity 3s;
+}
+
+#video.show {
+  z-index: 100;
+  opacity: 100%;
+  transition: opacity 3s;
+}
+
+#video.hidden {
+  opacity: 0%;
+  transition: opacity 3s;
+}
+
+#video {
+  background-color: black;
+  z-index: -1;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.fullwidth {
+    width: 100%;
+}
+
+h2 {
+  height: calc( 90vh / 7 );
+  font-size: 7vh;
+  text-align: center;
+  padding: 3vh 0 0 0;
+  margin: 0;
+}
