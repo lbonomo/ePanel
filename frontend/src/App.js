@@ -11,7 +11,7 @@ function App() {
 
   // TODO - leer de la configuracion - Implemetar /config en el backend
   // const [interval, setInterval] = useState(5000);
-  const interval = 60000
+  const interval = 5000
 
   useEffect( () => {
 
@@ -27,9 +27,7 @@ function App() {
 
     setTimeout( () => { ShowHidden() }, interval )
 
-
   }, [interval, showTurnos] )
-
 
   return (
     <div id="main">
@@ -42,7 +40,7 @@ function App() {
         showTurnos = { showTurnos }
         />
     </div>
-    );
+  );
 }
 
 export default App;

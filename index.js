@@ -3,7 +3,7 @@ const { app, BrowserWindow,  Menu} = require('electron');
 const path = require('path');
 
 const config = require(path.join(__dirname, '/package.json'));
-// const { apiServer } = require( path.join(__dirname, '/backend/server.js') );
+const { apiServer } = require( path.join(__dirname, '/backend/server.js') );
 app.setName(config.productName);
 
 var mainWindow = null;
@@ -14,6 +14,7 @@ app.on('ready', function () {
     title: config.productName,
     kiosk: true,
     webSecurity: false,
+    extraResources: 'app/myfolder/mysubfolder/',
     // webPreferences: {
     //   // nodeIntegration: true,
     //   // defaultEncoding: 'UTF-8',
