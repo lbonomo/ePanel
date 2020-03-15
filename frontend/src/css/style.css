@@ -28,7 +28,7 @@ body {
   transition: opacity 3s;
 }
 
-.turnos-hidden {
+.turnos.hidden {
   opacity: 0;
   transition: opacity 3s;
 }
@@ -132,10 +132,14 @@ p {
 }
 
 #image {
-  height: 100vh;
+  height: 100%;
+  width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 #image.hidden {
@@ -145,13 +149,13 @@ p {
 
 #image.show {
   z-index: 100;
-  opacity: 100%;
+  opacity: 1;
   transition: opacity 3s;
 }
 
 #video.show {
   z-index: 100;
-  opacity: 100%;
+  opacity: 1;
   transition: opacity 3s;
 }
 
@@ -180,4 +184,17 @@ h2 {
   text-align: center;
   padding: 3vh 0 0 0;
   margin: 0;
+}
+
+
+.datetime {
+  bottom: 0;
+  display: block;
+  position: absolute;
+  right: 0;
+  background: white;
+  width: 100%;
+  text-align: center;
+  padding: 0.2rem;
+  opacity: 0.3;
 }

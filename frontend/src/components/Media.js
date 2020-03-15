@@ -1,10 +1,9 @@
 
 import React, {useState, useEffect, Fragment } from 'react';
 
-const Media = ( { setShow, interval } ) => {
+const Media = ( { reloadMedia, setReloadMedia } ) => {
 
   const [media, setMedia] = useState([]);
-  const [start, setStart] = useState(false);
   const [load, setLoad] = useState(false);
   const [error, setError] = useState('');
 
@@ -18,8 +17,8 @@ const Media = ( { setShow, interval } ) => {
   // es confirmado en la pantalla.
 
   useEffect( () => {
-    if (start === false ) {
-      setStart(true);
+    if ( reloadMedia ) {
+      setReloadMedia(false)
       getMedia().then( (data) => {
         setLoad(true);
         setMedia(data)
@@ -27,9 +26,8 @@ const Media = ( { setShow, interval } ) => {
         setError(err.message);
         setLoad(true)
       })
-      setTimeout( () => { setShow('turnos') }, interval );
     }
-  }, [start, interval, setShow] )
+  }, [reloadMedia, setReloadMedia] )
 
 
     if (load) {
