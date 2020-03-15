@@ -9,7 +9,7 @@ Un panel que visualiza información de los turnos otorgados, intercalados con im
 - Las imágenes se obtienen de un repositorio de Google Drive.
 
 ## Back-end
-El back-end es un API Rest hecho en Servidor[Node.js](https://nodejs.org/)
+El back-end es un API Rest hecho en Servidor [Node.js](https://nodejs.org/)
 
 ### Instalación
  - Instalar node
