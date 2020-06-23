@@ -12,10 +12,13 @@ const TableRow = ( {row} ) => {
   }
 
   function toDate(str) {
-    let d = new Date( Date.parse(str))
+    // str = 2020-06-23T00:00:00.000Z
+    let d = new Date( Date.parse(str) )
+    // console.log(d.getTimezoneOffset());
     let year = d.getFullYear();
     let month = (1 + d.getMonth()).toString().padStart(2, '0');
-    let day = d.getDate().toString().padStart(2, '0');
+    // Uso .getUTCDate() para corregir el desvio por el uso orario
+    let day = d.getUTCDate().toString().padStart(2, '0');
     return `${day}/${month}/${year}`;
   }
 

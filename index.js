@@ -4,7 +4,9 @@ const path = require('path');
 
 const config = require(path.join(__dirname, '/package.json'));
 const { apiServer } = require( path.join(__dirname, '/backend/server.js') );
-app.setName(config.productName);
+
+app.name = config.productName;
+app.allowRendererProcessReuse = false;
 
 var mainWindow = null;
 
