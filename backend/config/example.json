@@ -2,6 +2,9 @@
   "panel-name":"name",
   "node_port": 5555,
   "json_indentation": 4,
+  "media_path":"/home/user/ePanel/media",
+  "data_path":"/home/user/ePanel/data",
+  "interval": 600000,
   "mssql": {
     "user": "mssql-name",
     "password": "some-password",
