@@ -30,6 +30,7 @@ async function query(sql_query, sql_config) {
 let query_file = './turnos/query.xsql';
 if ( fs.existsSync(query_file) ) {
   const sql_query = xsql(fs.readFileSync(query_file, 'utf8'));
+  // console.log(sql_query);
   // Esto queda feo... pero es una forma de autoejecutar una funcion
   (async() => {
     const data = await query(sql_query, sql_config);
