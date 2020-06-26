@@ -6,6 +6,7 @@ const config = require('config');
 // Execute Query
 routes.get('/config', (req, res) => {
   res.send({
+      'timezone':config.mssql.timezone,
       'interval':config.interval
   });
 });

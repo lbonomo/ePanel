@@ -98,6 +98,11 @@ p {
   flex-direction: row;
   height: calc( 100vh / 7 );
   border-top: 1px solid black;
+  font-size: 1.6rem;
+}
+
+.table-row.next {
+  opacity: .3;
 }
 
 .table-row:last-child {
@@ -118,6 +123,11 @@ p {
   width: 65vw;
   display: flex;
   flex-direction: column;
+}
+
+.column-cliente div.unidad {
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 .column-fecha {
