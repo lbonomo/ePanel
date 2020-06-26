@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import TableRow from '../components/TableRow';
 
-function Turnos({ showTurnos }) {
+function Turnos({ showTurnos, timezone }) {
 
   const [rows, setRows] = useState([]);
 
@@ -48,6 +48,7 @@ function Turnos({ showTurnos }) {
               <TableRow
                 row={row}
                 key={inedex}
+                timezone={timezone}
               />
             )})}
         </div>

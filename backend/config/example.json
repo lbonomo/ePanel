@@ -8,6 +8,7 @@
   "mssql": {
     "user": "mssql-name",
     "password": "some-password",
+    "timezone":0,
     "server": "host-ip",
     "database": "dababase-name",
     "options": {
