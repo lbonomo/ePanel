@@ -17,7 +17,6 @@
     }
   },
   "drive": {
-    "user":"",
-    "password":""
+    "remove_local": true
   }
 }

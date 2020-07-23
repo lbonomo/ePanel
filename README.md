@@ -68,6 +68,20 @@ siguiente formato.
   }
   ```
 
+### No such file or directory, open 'credentials.json'
+Para poder descargar las imágenes de Google Drive, necesitamos generar las credenciales necesarias y dar permiso de acceso al script.
+Para esto tenemos que ingrezar a la (Consola de APis de Google)[https://console.developers.google.com/apis/dashboard] y gestionar dicha credencial
+
+Una vez que tengamos el archivos 'credentials.json'  ejecutamos `node medias.js` y por única vez nos solicitara ingresar a una URL donde daremos permisos y nos devolvera un codigo que ingresaremos en la consola para generar el *Token*
+
+```
+Authorize this app by visiting this url: https://accounts.google.com/o/oauth2/v2/auth?access_type=offline&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdrive%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdrive.file%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdrive.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdrive.metadata.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdrive.appdata%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdrive.metadata&response_type=code&client_id=687392414212-tm3nmp30lr9rjajsna8n6grqe7jjm6m2.apps.googleusercontent.com&redirect_uri=urn%3Aietf%3Awg%3Aoauth%3A2.0%3Aoob
+Enter the code from that page here: [CODIGO]
+Token stored to token.json
+```
+
+En las próximas ejecuciones no sera necesario la intervención del usuario. Por otra parte si ya tenemos los archivos "credentials.json" y "token.json" de otra instalación los podemos copiar.
+
 ## Frontend
 El front-end es una aplicación [React](https://es.reactjs.org/) corriendo en Elextron en modo kiosko.
 Solo hace falta copiar el directorio `dist/linux-unpacked` y ejecutar `./epanel --no-sandbox`
