@@ -1,8 +1,10 @@
-const express = require('express');
-const routes = express();
+const express = require('express')
+const routes = express()
 
-routes.use(require('./turnos'));
-routes.use(require('./media'));
-routes.use(require('./config'));
+routes.use(require('./home'))
+routes.use(require('./status'))
+routes.use(require('./data'))
+routes.use(require('./media'))
+routes.use(require('./config'))
 
-module.exports = routes;
+module.exports = routes
