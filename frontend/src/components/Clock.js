@@ -1,5 +1,4 @@
 import React, {useState, useEffect } from 'react';
-
 const Clock = () => {
 
   const [date, setDate] = useState('');
@@ -40,7 +39,7 @@ const Clock = () => {
   } );
 
   return (
-    <div className="datetime">
+    <div className="clock">
       {date} {time}
     </div>
   )

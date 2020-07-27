@@ -17,6 +17,6 @@
     }
   },
   "drive": {
-    "remove_local": true
+    "remove_local": false
   }
 }

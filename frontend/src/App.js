@@ -1,20 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import Turnos from './components/Turnos';
+import Data from './components/Data';
 import Media from './components/Media';
-import Clock from './components/Clock';
+import Footer from './components/Footer';
 import './css/style.css';
 
 function App() {
 
-  const [showTurnos, setShowTurnos] = useState(true);
+  const [showData, setshowData] = useState(true);
   const [reloadMedia, setReloadMedia ] = useState(true)
   const [interval, setInterval] = useState(5000);
   const [sqlTimezone, setsqlTimezone] = useState(0);
 
   async function getConfig() {
     let response = await await fetch('http://localhost:5555/config/');
-    let data = await response.json()
-    return data;
+    let config = await response.json()
+    return config;
   }
 
   useEffect( () => {
@@ -26,18 +26,18 @@ function App() {
     });
 
     const ShowHidden = () => {
-      console.log(`ShowHidden: ${ showTurnos }`);
-      if ( showTurnos ) {
-        setShowTurnos(false);
+      console.log(`ShowHidden: ${ showData }`);
+      if ( showData ) {
+        setshowData(false);
         setReloadMedia(true);
       } else {
-        setShowTurnos(true);
+        setshowData(true);
       }
     }
 
     setTimeout( () => { ShowHidden() }, interval )
 
-  }, [interval, showTurnos] )
+  }, [interval, showData] )
 
   return (
     <div id="main">
@@ -45,9 +45,9 @@ function App() {
         reloadMedia = { reloadMedia }
         setReloadMedia = { setReloadMedia }
         />
-      <Clock />
-      <Turnos
-        showTurnos = { showTurnos }
+      <Footer />
+      <Data
+        showData = { showData }
         timezone = { sqlTimezone }
         />
     </div>

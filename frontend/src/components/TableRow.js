@@ -7,7 +7,7 @@ const TableRow = ( {row, timezone} ) => {
     // n es un numero
     // console.log(typeof(n));
     let str = n.toFixed(2).toString();
-    let h = ( str.split('.')[0] > 10) ? str.split('.')[0] : ( '0' + str.split('.')[0] );
+    let h = ( str.split('.')[0] >= 10) ? str.split('.')[0] : ( '0' + str.split('.')[0] );
     let m = str.split('.')[1]
     return `${h}:${m}`;
   }

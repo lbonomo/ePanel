@@ -44,7 +44,7 @@ if (fs.existsSync(queryFile)) {
 // Escribo data.json
 const SaveTurnos = (data) => {
   if (data.status === 'success') {
-    fs.writeFileSync(`${dataPath}/data.json`, JSON.stringify(data.message, null, '\t'), 'utf8')
+    fs.writeFileSync(`${dataPath}/data.json`, JSON.stringify(data, null, '\t'), 'utf8')
   } else {
     console.log(data.message)
   }

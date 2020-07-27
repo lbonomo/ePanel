@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import TableRow from '../components/TableRow';
 
-function Turnos({ showTurnos, timezone }) {
+function Data({ showData, timezone }) {
 
   const [rows, setRows] = useState([]);
 
-  async function getTurnos() {
-    let response = await await fetch('http://localhost:5555/turnos');
+  async function getData() {
+    let response = await await fetch('http://localhost:5555/data');
     let data = await response.json()
     return data;
   }
@@ -14,8 +14,8 @@ function Turnos({ showTurnos, timezone }) {
   useEffect( () => {
     if ( rows.length === 0 ) {
       // Si rows esta vacio traigo los datos (vienen despues de renderizar)
-      getTurnos().then( (data) => {
-        setRows(data);
+      getData().then( (data) => {
+        if ( data.status === 'success' ) { setRows(data.message) }
       });
     }
   } );
@@ -23,7 +23,7 @@ function Turnos({ showTurnos, timezone }) {
   return(
     <div
       id="turnos"
-      className={ showTurnos ? "turnos" :  "turnos hidden"}
+      className={ showData ? "turnos" :  "turnos hidden"}
       >
         <div className="header">
           <div className="net">
@@ -39,10 +39,10 @@ function Turnos({ showTurnos, timezone }) {
 
         <div className="table">
           <div className="table-header">
-            <div className="column-hora">Ingreso</div>
-            <div className="column-cliente">Cliente/Unidad</div>
-            <div className="column-fecha">Fecha</div>
-            <div className="column-entrega">Entrega</div>
+            <div className="column-hora column-header">Ingreso</div>
+            <div className="column-cliente column-header">Cliente/Unidad</div>
+            <div className="column-fecha column-header">Fecha</div>
+            <div className="column-entrega column-header">Entrega</div>
           </div>
             { rows.map( (row, inedex) => { return (
               <TableRow
@@ -57,6 +57,6 @@ function Turnos({ showTurnos, timezone }) {
   );
 };
 
-export default Turnos;
+export default Data;
 
 //

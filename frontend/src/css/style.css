@@ -36,6 +36,9 @@ body {
 .header {
   display: flex;
   flex-direction: row;
+  height: 14vh;
+  background: #333;
+  color: white;
 }
 
 .header .net,
@@ -66,13 +69,6 @@ p {
   margin: 0;
 }
 
-.header .datetime .date {
-}
-
-/* .header .datetime .time {
-
-} */
-
 .header .title {
   width: 50vw;
 }
@@ -86,19 +82,22 @@ p {
 .table-header {
   display: flex;
   flex-direction: row;
-  height: calc( 90vh / 7 );
+  height: 10vh;
   font-size: 3vh;
   font-weight: 700;
   text-align: center;
   vertical-align: middle;
 }
+.table-header .column-header {
+  margin: auto auto 1vh;
+}
 
 .table-row {
   display: flex;
   flex-direction: row;
-  height: calc( 100vh / 7 );
+  height: calc(72vh / 5);
   border-top: 1px solid black;
-  font-size: 1.6rem;
+  font-size: 5vh;
 }
 
 .table-row.next {
@@ -126,7 +125,7 @@ p {
 }
 
 .column-cliente div.unidad {
-  font-size: 1rem;
+  font-size: 3vh;
   font-weight: 500;
 }
 
@@ -197,14 +196,36 @@ h2 {
 }
 
 
-.datetime {
+.footer {
   bottom: 0;
-  display: block;
+  display: flex;
   position: absolute;
   right: 0;
   background: white;
   width: 100%;
-  text-align: center;
-  padding: 0.2rem;
-  opacity: 0.3;
+  height: 3vh;
+  /* text-align: center; */
+  /* padding: 0.2vh; */
+  opacity: 0.7;
+  z-index: 10;
+}
+
+.footer .clock {
+  padding: 0 1vw;
+  width: 20%;
+  margin: auto;
+}
+
+.footer .timer {
+  padding: 0 1vw;
+  margin: auto;
+  width: 60%;
+
+}
+
+.footer .brand {
+  padding: 0 1vw;
+  margin: auto;
+  text-align: right;
+  width: 20%;
 }
