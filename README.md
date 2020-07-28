@@ -86,7 +86,7 @@ En las próximas ejecuciones no sera necesario la intervención del usuario. Por
 El front-end es una aplicación [React](https://es.reactjs.org/) corriendo en Elextron en modo kiosko.
 Solo hace falta copiar el directorio `dist/linux-unpacked` y ejecutar `./epanel --no-sandbox`
 
-### Aserca de Electron
+### Acerca de Electron
 [electron](https://electronjs.org/)
 
 To run the aplication you need:

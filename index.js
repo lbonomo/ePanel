@@ -3,7 +3,6 @@ const { app, BrowserWindow,  Menu} = require('electron');
 const path = require('path');
 
 const config = require(path.join(__dirname, '/package.json'));
-const { apiServer } = require( path.join(__dirname, '/backend/server.js') );
 
 app.name = config.productName;
 app.allowRendererProcessReuse = false;
@@ -22,11 +21,10 @@ app.on('ready', function () {
     //   // defaultEncoding: 'UTF-8',
     //   // autoplayPolicy: 'no-user-gesture-required'
     // },
-    icon: path.join(__dirname, 'assets/icons/icon.png')
+    // icon: path.join(__dirname, 'assets/icons/icon.png')
   });
   WebView.maximize();
   WebView.setMenuBarVisibility(false);
-
 
   //
   let userDataFolther = app.getPath('userData');
